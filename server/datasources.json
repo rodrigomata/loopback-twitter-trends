@@ -2,11 +2,5 @@
   "db": {
     "name": "db",
     "connector": "memory"
-  },
-  "Twitter": {
-    "name": "Twitter",
-    "baseURL": "https://api.twitter.com/1.1/",
-    "crud": false,
-    "connector": "rest"
   }
 }
