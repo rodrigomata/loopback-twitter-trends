@@ -8,15 +8,15 @@ The Trend model doesn't save data or validates constraints, as it's only for dem
 
 ### How does it work?
 
-1. Datasource templates are defined depending on the endpoints that need to be called. Be aware that in Twitter some endpoints end with .json, and the full URL is needed. [Link] (https://loopback.io/doc/en/lb3/REST-connector.html#configuring-a-rest-data-source)
+1. Datasource templates are defined depending on the endpoints that need to be called. Be aware that in Twitter some endpoints end with .json, and the full URL is needed. [Link](https://loopback.io/doc/en/lb3/REST-connector.html#configuring-a-rest-data-source)
 
 **/server/datasources.json**
 
-2. In order to request any method, in the Twitter API for example, an authentication header needs to be sent. You can define a datasource template; however, it's kind of tricky to access datasources if you are not inside a Loopback Model or in the root of the project, and it's cleaner to set an observer that intercepts the calls made to the REST connector. [Link] (https://loopback.io/doc/en/lb3/Working-with-LoopBack-objects.html#getting-the-app-object)
+2. In order to request any method, in the Twitter API for example, an authentication header needs to be sent. You can define a datasource template; however, it's kind of tricky to access datasources if you are not inside a Loopback Model or in the root of the project, and it's cleaner to set an observer that intercepts the calls made to the REST connector. [Link](https://loopback.io/doc/en/lb3/Working-with-LoopBack-objects.html#getting-the-app-object)
 
 **/server/boot/observer-oauth.js**
 
-3. Access the loopback object and the twitter datasource in the model. In case you need to access it from other script outside the /server folder, you need to set a relative path to the /server folder (wtf) or use the correct approach as written in their docs. [Link] (http://loopback.io/doc/en/lb3/Working-with-LoopBack-objects.html#getting-references-to-data-sources)  
+3. Access the loopback object and the twitter datasource in the model. In case you need to access it from other script outside the /server folder, you need to set a relative path to the /server folder (wtf) or use the correct approach as written in their docs. [Link](http://loopback.io/doc/en/lb3/Working-with-LoopBack-objects.html#getting-references-to-data-sources)  
 
 **/server/models/trend.js**
 
