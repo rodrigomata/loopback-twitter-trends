@@ -12,6 +12,21 @@
       "required": true,
       "defaultFn": "uuid"
     },
+    "name": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    },
+    "promoted_content": {
+      "type": "any"
+    },
+    "query": {
+      "type": "string"
+    },
+    "tweet_volume": {
+      "type": "number"
+    }
   },
   "validations": [],
   "relations": {},

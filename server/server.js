@@ -12,7 +12,7 @@ app.start = () => {
     console.log(`Web server listening at: ${baseUrl}`);
     if (app.get('loopback-component-explorer')) {
       let explorerPath = app.get('loopback-component-explorer').mountPath;
-      console.log(`Browse your REST API at ${baseUrl} ${explorerPath}`);
+      console.log(`Browse your REST API at ${baseUrl}${explorerPath}`);
     }
   });
 };

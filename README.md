@@ -52,6 +52,11 @@ $ sudo npm i -d
 
 Export your Twitter Credentials or run Node with these environment variables:
 
+(If you are using Windows):
+```sh
+$env:TWITTER_CONSUMER_KEY= "<consumer_key>"
+```
+
 ```sh
 $ export TWITTER_CONSUMER_KEY=<consumer_key>
 $ export TWITTER_CONSUMER_SECRET=<consumer_secret>
@@ -68,6 +73,10 @@ Run Node:
 ```sh
 $ node .
 ```
+
+User you API at http://localhost:3000/explorer
+
+[Find your WOEID](http://www.woeidlookup.com/)
 
 ## License
 

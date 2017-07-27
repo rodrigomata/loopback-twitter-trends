@@ -7,7 +7,7 @@ module.exports = app => {
     console.info('Setting OAuth header...');
     if(!process.env.TWITTER_ACCESS_TOKEN) {
       console.info('No token found, requesting a new one...');
-      let raw = process.env.TWITTER_CONSUMER_KEY + ':' process.env.TWITTER_CONSUMER_SECRET;
+      let raw = process.env.TWITTER_CONSUMER_KEY + ':' + process.env.TWITTER_CONSUMER_SECRET;
       // Exception if credentials haven't been set
       if(!raw) {
         console.error('Export your Twitter consumer key and secrets before!');
