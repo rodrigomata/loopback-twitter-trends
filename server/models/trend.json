@@ -2,16 +2,16 @@
   "name": "Trend",
   "plural": "trends",
   "base": "Model",
-  "idInjection": true,
+  "idInjection": false,
   "options": {
-    "validateUpsert": true
+    "validateUpsert": false
   },
   "properties": {
     "id": {
-      "type": "number",
+      "type": "string",
       "required": true,
-      "default": 1
-    }
+      "defaultFn": "uuid"
+    },
   },
   "validations": [],
   "relations": {},
