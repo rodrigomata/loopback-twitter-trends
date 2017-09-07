@@ -1,3 +1,4 @@
+![Build Status](https://travis-ci.org/rodrigomata/nodejs-loopback-twitter-trends.svg?branch=master)
 # Loopback REST Demo
 
 This project demonstrates the usage of Loopback REST connector with Twitter to fetch the Top Trends.
