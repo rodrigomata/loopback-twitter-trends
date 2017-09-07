@@ -16,9 +16,7 @@ module.exports = app => {
         error.message = ctx.req;
         return ctx.end(err, ctx, ctx.req);
       }
-      console.info(`Raw key: ${raw}...`);
-      let encripted = Buffer.from(raw).toString('base64');
-      console.info(`Encripted key: ${encripted}...`);
+      const encripted = Buffer.from(raw).toString('base64');
       request({
         method: 'POST',
         url: 'https://api.twitter.com/oauth2/token',
@@ -32,7 +30,6 @@ module.exports = app => {
         console.info('Token requested manually...');
         let parser = JSON.parse(body);
         process.env['TWITTER_ACCESS_TOKEN'] = parser.access_token;
-        console.info(`Using token: '${process.env.TWITTER_ACCESS_TOKEN}'`);
         ctx.req.headers = { 'Authorization': 'Bearer ' + process.env.TWITTER_ACCESS_TOKEN };
         return next();
       });
