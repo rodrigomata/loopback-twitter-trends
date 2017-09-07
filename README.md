@@ -1,4 +1,5 @@
 ![Build Status](https://travis-ci.org/rodrigomata/nodejs-loopback-twitter-trends.svg?branch=master)
+[![Known Vulnerabilities](https://snyk.io/test/github/snyk/goof/badge.svg)](https://snyk.io/test/github/rodrigomata/nodejs-loopback-twitter-trends)
 # Loopback REST Demo
 
 This project demonstrates the usage of Loopback REST connector with Twitter to fetch the Top Trends.
