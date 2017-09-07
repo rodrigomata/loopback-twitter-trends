@@ -6,10 +6,8 @@
     "node": ">=4"
   },
   "scripts": {
-    "lint": "eslint .",
     "start": "node .",
-    "test": "mocha",
-    "posttest": "npm run lint && nsp check"
+    "test": "mocha"
   },
   "dependencies": {
     "async": "^2.5.0",
@@ -33,6 +31,6 @@
     "type": "",
     "url": ""
   },
-  "license": "UNLICENSED",
+  "license": "MIT",
   "description": "node-twitter-trends"
 }
