@@ -2,16 +2,16 @@ language: node_js
 node_js: 8
 dist: trusty
 sudo: required
-
 addons:
   sonarcloud:
-    organization: "rodrigomata-github"
-    token:
-      secure: "5aaff851e5f7fba3c39422e4fd4f0b842d926c88"
+    organization: rodrigomata-github
 jdk:
-  - oraclejdk8
+- oraclejdk8
 script:
-  - sonar-scanner
+- sonar-scanner
 cache:
   directories:
-    - '$HOME/.sonar/cache'
+  - "$HOME/.sonar/cache"
+env:
+  global:
+  - secure: renPP/4CIJs9ckeLRPYPB9NQp4ku7dGNbWQM54K+k35bboyquSYoWc4bsf9S2EDerPMn+KMXWLom2XbK23CKN66YMWa2WqT3zaFgYhECDUV41xwGuWrTbrrGtkrIUiFRUXOWIh6EAixBpSzQHm1o0wRdxNfRBPb43iBta/Tz3vz4RDa3bmqks2s8/f13Ejn/Mk2eH2gKntrC6aX5/NUoL3FAR1OhVop/MD8BdaZyxrPVR9QB9YnGO3CSuU0vkGEt6YMOSPRRJyfdszCmrmy2MaL1UKjP9n7AUajm+Tf4cKLJ2mLwPbqeu0AgncOaIMXcvOU3GYuIUi2aOaOyqhtCzd16Dh/qIDDL8iIW9qX4kqqld0u8qliC6vmf0dRQdlVuaO2F1qdNmTqgwJSr4BSWPXUGzZO2BP1tJaUXQJnhn09JyCq34ET/jvaD+M36xZr42qgN43UQ/+R7Br850Hj7Rz80YGLM7s3M1tnINX+L4s9ALvd5INbOXrYaS/PoFSiaawJG0IFMIRis+nTkNdC1eTt2Wic2BKbPmaj2W0VCV798/rIEhbCpoLWWPsHumFiL6YrJqz2MgG5RdEOVjMqXJnlHTp6bNb34xbXoOQeTg/oc9kge17rrCM670uLXmlqaaY4JmjMR+tsnvDf35fLlVHXjAMJarDxEOChgWYTvirM=
