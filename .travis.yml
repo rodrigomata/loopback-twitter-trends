@@ -1,2 +1,17 @@
 language: node_js
 node_js: 8
+dist: trusty
+sudo: required
+
+addons:
+  sonarcloud:
+    organization: "rodrigomata-github"
+    token:
+      secure: "5aaff851e5f7fba3c39422e4fd4f0b842d926c88"
+jdk:
+  - oraclejdk8
+script:
+  - sonar-scanner
+cache:
+  directories:
+    - '$HOME/.sonar/cache'
