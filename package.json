@@ -1,16 +1,15 @@
 {
   "name": "node-twitter-trends",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "main": "server/server.js",
   "engines": {
-    "node": ">=4"
+    "node": ">=8"
   },
   "scripts": {
     "start": "node .",
     "test": "mocha"
   },
   "dependencies": {
-    "async": "^2.5.0",
     "compression": "^1.0.3",
     "cors": "^2.5.2",
     "helmet": "^3.6.1",
@@ -24,8 +23,8 @@
   "devDependencies": {
     "eslint": "^3.17.1",
     "eslint-config-loopback": "^8.0.0",
-    "mocha": "^3.5.0",
-    "nsp": "^2.1.0"
+    "mocha": "^5.2.0",
+    "nsp": "^3.2.1"
   },
   "repository": {
     "type": "",
