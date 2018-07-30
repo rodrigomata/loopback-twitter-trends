@@ -33,7 +33,6 @@ The Trend model doesn't save data or validates constraints, as it's only for dem
 - Loopback Boot 2.x
 - Loopback Explorer 4.x
 - Loopback REST Connector 2.x
-- Async 2.x
 
 ### Commit Style
 
