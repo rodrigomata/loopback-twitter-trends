@@ -2,7 +2,7 @@
 const request = require('request');
 
 module.exports = app => {
-  const TwitterConnector = app.dataSources.twitter.connector;
+  const TwitterConnector = app.datasources.twitter.connector;
   return TwitterConnector.observe('before execute', (ctx, next) => {
     const {
       TWITTER_ACCESS_TOKEN,
@@ -10,15 +10,15 @@ module.exports = app => {
       TWITTER_CONSUMER_SECRET
     } = process.env;
     if (!TWITTER_ACCESS_TOKEN) {
-      const raw = `${TWITTER_CONSUMER_KEY}:${TWITTER_CONSUMER_SECRET}`;
       // Exception if credentials haven't been set
-      if (!raw) {
+      if(!TWITTER_CONSUMER_KEY || !TWITTER_CONSUMER_SECRET) {
         console.error('Export your Twitter consumer key and secrets before!');
         const error = new Error();
         error.status = 403;
         error.message = ctx.req;
         return ctx.end(err, ctx, ctx.req);
       }
+      const raw = `${TWITTER_CONSUMER_KEY}:${TWITTER_CONSUMER_SECRET}`;
       const encripted = Buffer.from(raw).toString('base64');
       request({
         method: 'POST',

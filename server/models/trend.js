@@ -5,7 +5,7 @@ module.exports = Trend => {
   Trend.getTrends = async function (countryId = 1, cb) {
     try {
       const results = await Trend.app.datasources.twitter.getTrends(countryId);
-      return results[0].trends.sort((a, b) => a.tweet_volume < b.tweet_volume);
+      cb(null, results[0].trends.sort((a, b) => a.tweet_volume < b.tweet_volume));
     } catch (err) {
       cb(err);
     }
