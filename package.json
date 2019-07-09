@@ -4,7 +4,9 @@
   "main": "server/server.js",
   "scripts": {
     "start": "node .",
-    "test": "./node_modules/mocha/bin/mocha"
+    "test": "./node_modules/mocha/bin/mocha",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "compression": "^1.0.3",
@@ -15,7 +17,8 @@
     "loopback-component-explorer": "^6.2.0",
     "loopback-connector-rest": "^3.2.0",
     "serve-favicon": "^2.0.1",
-    "strong-error-handler": "^3.0.0"
+    "strong-error-handler": "^3.0.0",
+    "snyk": "^1.192.4"
   },
   "devDependencies": {
     "chai": "^4.1.2",
@@ -30,5 +33,6 @@
     "url": ""
   },
   "license": "MIT",
-  "description": "node-twitter-trends"
+  "description": "node-twitter-trends",
+  "snyk": true
 }
